@@ -1,0 +1,38 @@
+int
+main ()
+{
+  int h, m;
+  printf ("inserisci l'ora: \n");
+  scanf ("%d%d", &h, &m);
+  
+   
+        
+   //ore del giorno     
+  if (h <= 12)
+    printf (" Siamo alle %.2d:%.2dPM\n", h, m);
+    //la notte
+  else
+    switch (h)
+      {
+      case 13: printf ("Siamo alle 01:%.2dAM", m);
+      case 14: printf ("Siamo alle 02:%.2dAM", m);
+      case 15: printf ("Siamo alle 03:%.2dAM", m);
+      case 16: printf ("Siamo alle 04:%.2dAM", m);
+      case 17: printf ("Siamo alle 05:%.2dAM", m);
+      case 18: printf ("Siamo alle 06:%.2dAM", m);
+      case 19: printf ("Siamo alle 07:%.2dAM", m);
+      case 20: printf ("Siamo alle 08:%.2dAM", m);
+      case 21: printf ("Siamo alle 09:%.2dAM", m);
+      case 22: printf ("Siamo alle 10:%.2dAM", m);
+      case 23: printf ("Siamo alle 11:%.2dAM", m);
+      case 24: printf ("Siamo alle 00:%.2dPM", m);
+      }
+ //non e possible
+   if(h <0 || h > 24)
+        printf("error format");
+  if (m < 0 || m > 60) 
+        printf("error format"); 
+
+
+  return 0;
+}
